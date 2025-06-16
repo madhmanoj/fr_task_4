@@ -1,0 +1,21 @@
+{
+    "name": "task-dev",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-vscode.vscode-typescript-next",
+          "rust-lang.rust-analyzer",
+          "ms-azuretools.vscode-docker"
+        ]
+      }
+    },
+    "remoteUser": "developer",
+    "appPort": [8080],
+    "runArgs": [
+      "--network", "host"
+    ]
+  }
+  
