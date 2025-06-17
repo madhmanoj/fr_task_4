@@ -20,6 +20,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
     git-core \
     sudo \
     python3 \
+    # For wasm-opt
+    binaryen \
     && rm -rf /var/lib/apt/lists/*
 
 # Node.js
@@ -29,7 +31,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 
 # Scaffolding for vscode extension
-RUN npm install -g yo generator-code
+# RUN npm install -g yo generator-code
 
 # wit2ts tool for generating typescript bindings
 # RUN npm install -g @vscode/wasm-component-model
@@ -52,4 +54,4 @@ ENV PATH=/home/developer/.cargo/bin:$PATH
 RUN rustup target add wasm32-unknown-unknown
 # RUN rustup target add wasm32-wasip1
 # RUN cargo install --locked wasm-tools@1.220.0
-#CRUN cargo install wit-bindgen-cli
+# RUN cargo install wit-bindgen-cli
