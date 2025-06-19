@@ -52,6 +52,6 @@ RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 ENV PATH=/home/developer/.cargo/bin:$PATH
 # https://blog.rust-lang.org/2024/04/09/updates-to-rusts-wasi-targets/
 RUN rustup target add wasm32-unknown-unknown
-# RUN rustup target add wasm32-wasip1
+RUN rustup target add wasm32-wasip1
 # RUN cargo install --locked wasm-tools@1.220.0
 # RUN cargo install wit-bindgen-cli
