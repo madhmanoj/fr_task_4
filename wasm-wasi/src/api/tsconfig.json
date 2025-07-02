@@ -3,7 +3,7 @@
         "types": [
             "vscode"
         ],
-        "typeRoots": ["../../../ext4/node_modules/@types"],
+        "typeRoots": ["../../../wasm-wasi-core/node_modules/@types"],
         "module": "Node16",
         "moduleResolution": "Node16",
         "target": "es2022",
