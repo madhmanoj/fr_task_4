@@ -31,7 +31,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 
 # Scaffolding for vscode extension
-# RUN npm install -g yo generator-code
+RUN npm install -g yo generator-code
 
 # wit2ts tool for generating typescript bindings
 # RUN npm install -g @vscode/wasm-component-model

@@ -1,1 +1,9 @@
-rust-wasm-interop/node_modules
+vscode/
+hello_world/node_modules/
+hello_world/dist/
+wasm-wasi-core/node_modules/
+wasm-wasi-core/dist/
+wasm-wasi/node_modules/
+wasm-wasi/lib/
+ext4/node_modules/
+ext4/dist/

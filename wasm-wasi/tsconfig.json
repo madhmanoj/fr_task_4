@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "incremental": true,
+        "composite": true,
+        "types": ["vscode"],
+        "typeRoots": ["../ext4/node_modules/@types"]
+    },
+    "files": [],
+    "references": [
+        {
+            "path": "./src/api/tsconfig.json"
+        },
+        {
+            "path": "./src/tools/tsconfig.json"
+        }
+    ]
+}
