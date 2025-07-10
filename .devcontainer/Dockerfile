@@ -36,14 +36,13 @@ RUN npm install -g yo generator-code
 # wit2ts tool for generating typescript bindings
 # RUN npm install -g @vscode/wasm-component-model
 
-
 # Create a developer user
-RUN groupadd --gid $group_id developer && useradd --uid $user_id --gid $group_id -m developer && \
-    echo developer ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/developer && \
+RUN groupadd --gid $group_id developer && useradd --uid $user_id --gid $group_id -m developer
+# Add developer user to the sudo file
+RUN echo developer ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/developer && \
     chmod 0440 /etc/sudoers.d/developer
-
+# Switch the developer user
 USER developer
-WORKDIR /home/developer
 
 # Install Rust, and essential WASM tools
 # https://github.com/microsoft/vscode-wasm/issues/220
